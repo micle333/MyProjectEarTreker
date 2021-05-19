@@ -5,11 +5,25 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Statistic"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyProjectEarTrecker">
-        <activity android:name=".LoginActivity"></activity>
+        <receiver android:name=".NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+
+        <activity android:name=".Menu" />
+        <activity android:name=".Add_Device" />
+        <activity android:name=".Warning" />
+        <activity android:name=".Statistic" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".zactavka">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +31,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <service android:name=".Service" />
+
     </application>
 
 </manifest>

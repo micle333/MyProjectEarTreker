@@ -1,14 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:theme="@android:style/Theme.Black.NoTitleBar"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2B2B2B"
+    android:background="#FFFFFF"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_font"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        />
+
+    
+
+    <ImageView
+        android:id="@+id/stat_icon"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/stat_icon"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_statistic"
+        app:layout_constraintStart_toStartOf="@+id/button_statistic"
+        app:layout_constraintTop_toTopOf="@+id/button_statistic" />
+
+    <ImageView
+        android:id="@+id/warng_icon"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/warng_icon"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_warnings"
+        app:layout_constraintStart_toStartOf="@+id/button_warnings"
+        app:layout_constraintTop_toTopOf="@+id/button_warnings"
+        app:layout_constraintVertical_bias="0.0" />
+    <ImageView
+        android:id="@+id/add_icon"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/add_icon"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_device"
+        app:layout_constraintStart_toStartOf="@+id/add_device"
+        app:layout_constraintTop_toTopOf="@+id/add_device"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/add_device"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/button_statistic"
+        android:text="  ADD DEVICE"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:backgroundTint="#00ABD7"
+        app:iconTint="#00ABD7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/button_warnings"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_statistic"
+        android:backgroundTint="#00ABD7"
+        android:fontFamily="@font/montserrat"
+        android:text="WARNING"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:backgroundTint="#00ABD7"
+        app:iconTint="#00ABD7"
+        app:layout_constraintBottom_toTopOf="@+id/add_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_statistic"
+        app:layout_constraintVertical_bias="0.505"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/button_statistic"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_statistic"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/montserrat"
+        android:text="STATISTIC"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:backgroundTint="#00ABD7"
+        app:iconPadding="8dp"
+        app:iconTint="@color/black"
+        app:iconTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:rippleColor="#00FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/menu_but"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="219dp"
+        android:layout_height="255dp"
+        android:src="@drawable/diagram1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 
+
+
+    <TextView
+        android:id="@+id/timerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/timerRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.92" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
