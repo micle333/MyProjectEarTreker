@@ -2,6 +2,7 @@ package com.example.myprojecteartrecker;
 
 import android.content.Context;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,50 +12,55 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.ViewHolder> {
+import java.util.ArrayList;
+
+public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.MyViewHolder> {
     Context context;
-    public String[] programNameList;
 
-    int[] images;
+    ArrayList<User> list;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView rowName;
 
-        ImageView rowImage;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            rowName = itemView.findViewById(R.id.textView1);
-            rowImage = itemView.findViewById(R.id.imageView3);
-
-        }
-    }
-
-    public ProgramAdapter(Context context,String[] programNameList,int[] images){
+    public ProgramAdapter(Context context, ArrayList<User> list) {
         this.context = context;
-        this.programNameList = programNameList;
-
-        this.images = images;
+        this.list = list;
     }
 
     @NonNull
     @Override
-    public ProgramAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.single_item, parent,false);
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.single_item,parent,false);
+        return  new MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProgramAdapter.ViewHolder holder, int position) {
-    holder.rowName.setText(programNameList[position]);
-    holder.rowImage.setImageResource(images[position]);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        User user = list.get(position);
+        holder.Date.setText(user.getDate());
+        holder.Time.setText(user.getTime());
+        Log.d((String) "TAG", "ТАЙМЕРooo-----------" + user.getTime());
+
+
+
     }
 
     @Override
     public int getItemCount() {
-        return programNameList.length;
+        return list.size();
+    }
 
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+
+        TextView Date, Time;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            Date = itemView.findViewById(R.id.Date);
+            Time = itemView.findViewById(R.id.time);
+
+
+        }
     }
 
 }

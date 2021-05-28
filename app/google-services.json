@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "111187008413",
+    "firebase_url": "https://eartreker-default-rtdb.firebaseio.com",
+    "project_id": "eartreker",
+    "storage_bucket": "eartreker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111187008413:android:b20778834e57558e26ad74",
+        "android_client_info": {
+          "package_name": "com.example.myprojecteartrecker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111187008413-o2oprvskf6kjhiqprb5eu0jf9rjeibd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnlXHVjBe7WvN-L1RiULD7js2XfNtN7Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111187008413-o2oprvskf6kjhiqprb5eu0jf9rjeibd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
