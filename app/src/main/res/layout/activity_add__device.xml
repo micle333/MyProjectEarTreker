@@ -5,5 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Add_Device">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="405dp"
+        android:layout_height="421dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/notfound" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie1"
+        android:layout_width="405dp"
+        android:layout_height="421dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/page" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

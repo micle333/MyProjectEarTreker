@@ -2,7 +2,7 @@ package com.example.myprojecteartrecker;
 
 public class User {
 
-    String Date, Time;
+    String Date, Time, Pic;
 
     public String getDate() {
         return Date;
@@ -12,4 +12,5 @@ public class User {
         return Time;
     }
 
+    public String getImage() { return Pic; }
 }

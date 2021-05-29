@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-    private static final Object TAG = "main";
-    private static final String FILE_NAME =  "MetaData.txt";;
     private Button button_statistic, button_warnings,add_device;
     private ImageButton Menu;
     TextView timerRight1;
@@ -27,25 +25,17 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        //timerRight1 = findViewById(R.id.timerRight);
-
-
 
         Intent servo = new Intent(this, MyService.class);
         this.startService(servo);
 
         overridePendingTransition(R.anim.slide_up_in,R.anim.slide_up_out);
 
-        Intent intent = getIntent();
         runTimer();
 
-
-
-        //button_statistic = (Button) findViewById(R.id.button_statistic);
         button_statistic = (Button) findViewById(R.id.button_statistic);
 
         button_warnings = (Button) findViewById(R.id.button_warnings);
@@ -112,8 +102,6 @@ public class MainActivity extends Activity {
             public void run() {
 
                 timerRight1.setText(Pref.getString("SECON", ""));
-
-
 
                 handler.postDelayed(this, 1000);
             }

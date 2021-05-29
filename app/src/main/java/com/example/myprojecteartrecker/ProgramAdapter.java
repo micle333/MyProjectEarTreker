@@ -1,8 +1,6 @@
 package com.example.myprojecteartrecker;
 
 import android.content.Context;
-import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,9 +38,9 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.MyViewHo
         User user = list.get(position);
         holder.Date.setText(user.getDate());
         holder.Time.setText(user.getTime());
-        Log.d((String) "TAG", "ТАЙМЕРooo-----------" + user.getTime());
-
-
+        String imageUri = null;
+        imageUri = user.getImage();
+        Picasso.get().load(imageUri).into(holder.Pic);
 
     }
 
@@ -52,14 +52,14 @@ public class ProgramAdapter extends RecyclerView.Adapter<ProgramAdapter.MyViewHo
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView Date, Time;
+        ImageView Pic;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             Date = itemView.findViewById(R.id.Date);
             Time = itemView.findViewById(R.id.time);
-
-
+            Pic = itemView.findViewById(R.id.imageView3);
         }
     }
 

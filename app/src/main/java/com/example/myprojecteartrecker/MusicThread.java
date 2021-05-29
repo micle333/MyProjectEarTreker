@@ -29,7 +29,6 @@ public class MusicThread extends Thread{
     public MusicThread(Messenger messenger, int seconds) {
         this.messenger = messenger;
         this.seconds = seconds;
-        Log.d((String) "TAG",    seconds + "<<<<<ТРЭД-------------------ТРЭД>>>>>>");
     }
 
     @Override
@@ -65,7 +64,6 @@ public class MusicThread extends Thread{
                 msg.setData(bundle1);
                 try {   this.messenger.send(msg); }
                 catch (RemoteException e) { e.printStackTrace();    }
-                Log.d((String) "TAG",   text + "<<<<<--------------------------->>>>>>");
             }
 
 

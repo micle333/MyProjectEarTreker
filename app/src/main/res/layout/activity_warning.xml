@@ -2,8 +2,67 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textPoly"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:foregroundTint="#2196F3"
     tools:context=".Warning">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="405dp"
+        android:layout_height="421dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/warning" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="327dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="27dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Set the time after which you will receive a notification. Recommended time 3 hours"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="339dp"
+        android:layout_height="122dp"
+        android:layout_margin="40dp"
+        android:indeterminate="false"
+        android:max="14400"
+        android:orientation="vertical"
+        android:progress="1800"
+        android:progressDrawable="@drawable/track"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/component_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
